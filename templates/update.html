@@ -1,0 +1,27 @@
+{% extends 'home.html' %}
+
+{% block home%}
+<div class="container">
+    <form method="post" action = '/update_list'>
+        <table class="table table-borderless table-dark">
+            {% for record in update_res %}
+            <tr>
+                    <th> {{ record['Name'] }} </th>
+                    <th> {{ record['State'] }}</th>
+                    <th> <input type="number" name="Salary" value="{{ record['Salary'] }}"> </th>
+                    <th>{{ record['Grade'] }} </th>
+                    <th>{{record['Room']}}</th>
+                    <th>{{ record['Telnum'] }} </th>
+                    <th> <img src="https://assignment1m.blob.core.windows.net/assignment1/{{record['Picture']}}" alt= "{{record['Picture']}}" width="100px" height="100px"> </th>
+                    <th><input type="text" name="Keywords" value="{{ record['Keywords'] }}"> </th>
+            </tr>
+            {% endfor%}
+           </table>
+           <br>
+           <input type="submit"  name = "update" value = "Update">
+    </form>
+    
+</div>
+   
+
+{% endblock %}

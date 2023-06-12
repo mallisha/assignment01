@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mallisha Shailesh Patkar </h1>
+    <h2>Student id : 1002060037</h2>
+    <h3>Search Results: </h3>
+    <div>
+        {% if name is defined %}
+        <p>{{name}}</p>
+        {% endif %}
+        {% for Picture in rec_res %}
+        
+        
+             <img src="https://assignment1m.blob.core.windows.net/assignment1/{{Picture}}" alt= '{{Picture}}' width="100px" height="100px"> </td>           
+        
+        {% endfor %}
+    </div>
+    
+</body>
+</html>
